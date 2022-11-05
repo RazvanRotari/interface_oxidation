@@ -7,7 +7,7 @@ mkdir -p build && \
 	cd ..  &&\
 	cp rust/target/debug/librust.so build/librust.so && \
 	echo "Build C code" && \
-	gcc -o build/libexample.so src/main.c --shared && \
+	g++ -o build/libexample.so src/main.c --shared && \
 	gcc -o build/basic src/main.c  -lrust -Lbuild && \
 	LD_LIBRARY_PATH=`pwd`/build ./build/basic
 	

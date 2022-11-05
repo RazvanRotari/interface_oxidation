@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+    "oxidation",
+    "examplelib-sys",
+]
